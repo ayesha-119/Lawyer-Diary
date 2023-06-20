@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_my_profile">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="30dp">
+            <RelativeLayout
+                android:layout_marginTop="5dp"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Username"
+                    android:id="@+id/t1"/>
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/t1"
+                    android:id="@+id/uname"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/blackTextColor"
+                    android:textSize="14sp"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="developer"
+
+                    style="@style/profileDetailsMiniText" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/profileAccentColor"
+                android:layout_marginTop="5dp"/>
+            <RelativeLayout
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content">
+
+                <TextView
+                    android:id="@+id/t2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Phono No" />
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/uphone"
+                    android:text="+91-8129999999"
+                    android:layout_below="@+id/t2"
+                    android:textColor="@color/blackTextColor"
+                    android:textSize="14sp"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" />
+            </RelativeLayout>
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/profileAccentColor"
+                android:layout_marginTop="5dp"/>
+            <RelativeLayout
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content">
+
+                <TextView
+                    android:id="@+id/t3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email" />
+
+
+                <TextView
+                    android:id="@+id/uEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/t3"
+                    android:layout_marginTop="10dp"
+                    android:text="developer@appsnipp.com"
+                    android:textColor="@color/blackTextColor"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/profileAccentColor"
+                android:layout_marginTop="5dp"/>
+            <RelativeLayout
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content">
+
+                <TextView
+                    android:id="@+id/t4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chamber No" />
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/uAddress"
+                    android:text="Avenue 2nd Street NW SY."
+                    android:layout_below="@+id/t4"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/blackTextColor"
+                    android:textSize="14sp"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/profileAccentColor"
+                android:layout_marginTop="5dp"/>
+            <RelativeLayout
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chamber Address"
+                    android:id="@+id/t5"/>
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/uChamberno"
+                    android:text="12-05-1990"
+                    android:layout_below="@+id/t5"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/blackTextColor"
+                    android:textSize="14sp"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/profileAccentColor"
+                android:layout_marginTop="5dp"/>
+            <Button
+                android:layout_marginBottom="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:padding="10dp"
+                android:text="Edit Profile"
+                android:id="@+id/edit_profile"/>
+        </LinearLayout>
+
+
+</androidx.core.widget.NestedScrollView>

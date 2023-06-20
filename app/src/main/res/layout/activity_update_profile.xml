@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.UpdateProfile">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_centerHorizontal="true"
+        android:layout_margin="30dp"
+        android:id="@+id/uImage"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/ic_baseline_image_search_24"/>
+    <LinearLayout
+        android:layout_below="@+id/uImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="30dp">
+        <RelativeLayout
+            android:layout_marginTop="5dp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Username"
+                android:id="@+id/t1"/>
+
+            <EditText
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/t1"
+                android:id="@+id/Name"
+                android:layout_centerVertical="true"
+                android:textColor="@color/blackTextColor"
+                android:textSize="14sp"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="developer"
+
+                style="@style/profileDetailsMiniText" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content">
+
+            <TextView
+                android:id="@+id/t2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phono No" />
+
+            <EditText
+                android:layout_marginTop="5dp"
+                android:layout_centerVertical="true"
+                android:id="@+id/PhoneNo"
+                android:text="+91-8129999999"
+                android:layout_below="@+id/t2"
+                android:textColor="@color/blackTextColor"
+                android:textSize="14sp"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content">
+
+            <TextView
+                android:id="@+id/t4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chamber No" />
+
+            <EditText
+                android:layout_marginTop="5dp"
+                android:id="@+id/chamberNo"
+                android:text="Avenue 2nd Street NW SY."
+                android:layout_below="@+id/t4"
+                android:layout_centerVertical="true"
+                android:textColor="@color/blackTextColor"
+                android:textSize="14sp"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chamber Address"
+                android:id="@+id/t5"/>
+
+            <EditText
+                android:layout_marginTop="5dp"
+                android:id="@+id/chamberAddress"
+                android:text="12-05-1990"
+                android:layout_below="@+id/t5"
+                android:layout_centerVertical="true"
+                android:textColor="@color/blackTextColor"
+                android:textSize="14sp"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" />
+
+        </RelativeLayout>
+
+
+        <Button
+            android:layout_marginBottom="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:text="Update Profile"
+            android:id="@+id/btn_update"/>
+    </LinearLayout>
+
+
+
+</RelativeLayout>

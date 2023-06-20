@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="#f5f6f6"
+
+    android:layout_height="match_parent"
+    tools:context=".Activities.AboutUsActivity">
+
+    <TextView
+        android:textSize="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="About Us"
+        android:textColor="@color/white"
+        android:padding="15dp"
+        android:background="@color/themecolor"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="20dp"
+        android:layout_marginBottom="10dp">
+        <com.google.android.material.card.MaterialCardView
+            android:outlineAmbientShadowColor="@color/shadowcolor"
+            android:outlineSpotShadowColor="@color/shadowcolor"
+            android:elevation="2dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            app:cardCornerRadius="4dp">
+            <RelativeLayout
+                android:padding="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical">
+                <ImageView
+                    android:layout_centerVertical="true"
+                    android:id="@+id/company"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/icc_version"/>
+                <View
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/company"
+                    android:id="@+id/view2"
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/contentDividerLine"/>
+                <TextView
+                    android:id="@+id/t2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/view2"
+                    android:layout_marginLeft="20dp"
+                    android:text="Version"
+                    android:textColor="@color/themecolor"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/t2"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@+id/view2"
+                    android:text="1.0"
+                    android:textColor="@color/themecolor" />
+
+            </RelativeLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_company"
+            android:elevation="2dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:outlineAmbientShadowColor="@color/shadowcolor"
+            android:outlineSpotShadowColor="@color/shadowcolor"
+            app:cardCornerRadius="4dp">
+            <RelativeLayout
+                android:padding="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical">
+                <ImageView
+                    android:layout_centerVertical="true"
+                    android:id="@+id/version"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/icc_user"/>
+                <View
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/version"
+                    android:id="@+id/view"
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/contentDividerLine"/>
+                <TextView
+                    android:id="@+id/t1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/view"
+                    android:layout_marginLeft="20dp"
+                    android:text="Company"
+                    android:textColor="@color/themecolor"/>
+                <TextView
+                    android:layout_below="@+id/t1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/view"
+                    android:layout_marginLeft="20dp"
+                    android:text="UpTree Developers"
+                    android:textColor="@color/themecolor"/>
+
+            </RelativeLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_email"
+            android:elevation="2dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:outlineAmbientShadowColor="@color/shadowcolor"
+            android:outlineSpotShadowColor="@color/shadowcolor"
+            app:cardCornerRadius="4dp">
+            <RelativeLayout
+                android:padding="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical">
+                <ImageView
+                    android:layout_centerVertical="true"
+                    android:id="@+id/email"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/icc_email"/>
+                <View
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/email"
+                    android:id="@+id/view3"
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/contentDividerLine"/>
+                <TextView
+                    android:id="@+id/t3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/view3"
+                    android:layout_marginLeft="20dp"
+                    android:text="Email"
+                    android:textColor="@color/themecolor"/>
+                <TextView
+                    android:layout_below="@+id/t3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/view3"
+                    android:layout_marginLeft="20dp"
+                    android:text="info@uptreedevelopers.com"
+                    android:textColor="@color/themecolor"/>
+
+            </RelativeLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_website"
+            android:elevation="2dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:outlineAmbientShadowColor="@color/shadowcolor"
+            android:outlineSpotShadowColor="@color/shadowcolor"
+            app:cardCornerRadius="4dp">
+            <RelativeLayout
+                android:padding="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical">
+                <ImageView
+                    android:layout_centerVertical="true"
+                    android:id="@+id/website"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/icc_web"/>
+                <View
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/website"
+                    android:id="@+id/view4"
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/contentDividerLine"/>
+                <TextView
+                    android:id="@+id/t4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/view4"
+                    android:layout_marginLeft="20dp"
+                    android:text="Website"
+                    android:textColor="@color/themecolor"/>
+                <TextView
+                    android:layout_below="@+id/t4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/view4"
+                    android:layout_marginLeft="20dp"
+                    android:text="www.uptreedevelopers.com"
+                    android:textColor="@color/themecolor"/>
+
+            </RelativeLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_phone"
+            android:elevation="2dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:outlineAmbientShadowColor="@color/shadowcolor"
+            android:outlineSpotShadowColor="@color/shadowcolor"
+            app:cardCornerRadius="4dp">
+            <RelativeLayout
+                android:padding="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical">
+                <ImageView
+                    android:layout_centerVertical="true"
+                    android:id="@+id/contact"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/icc_call"/>
+                <View
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/contact"
+                    android:id="@+id/view5"
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/contentDividerLine"/>
+                <TextView
+                    android:id="@+id/t5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/view5"
+                    android:layout_marginLeft="20dp"
+                    android:text="Contact"
+                    android:textColor="@color/themecolor"/>
+                <TextView
+                    android:layout_below="@+id/t5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/view5"
+                    android:layout_marginLeft="20dp"
+                    android:text="+92 315 394 4711"
+                    android:textColor="@color/themecolor"/>
+
+            </RelativeLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

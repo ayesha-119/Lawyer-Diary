@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:gl="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/backgroundColor"
+        >
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@drawable/toolbar_background"
+            android:minHeight="?attr/actionBarSize"
+            />
+
+        <TextView
+            android:textColor="@color/themecolor"
+            android:textSize="16sp"
+            android:fontFamily="@font/roboto_light"
+            android:layout_width="wrap_content"
+            android:layout_height="?attr/actionBarSize"
+            android:text="Law Diary"
+            android:layout_marginStart="50sp"
+            android:gravity="center"
+            />
+
+        <RelativeLayout
+            android:id="@+id/l1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="40dp"
+            android:layout_below="@+id/toolbar"
+
+           >
+
+            <TextView
+                android:id="@+id/uName"
+                android:textSize="22sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hi! Mr.xxxxxxxxx"
+                android:fontFamily="@font/open_sans_regular"
+                android:textColor="@color/themecolor" />
+
+            <TextView
+                android:layout_below="@+id/uName"
+                android:id="@+id/welcome"
+                android:textColor="@color/themecolor"
+                android:fontFamily="@font/open_sans_bold"
+                android:textSize="22sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Have a nice Day" />
+
+            <TextView
+                android:id="@+id/current_date"
+                android:layout_below="@+id/welcome"
+                android:fontFamily="@font/open_sans_regular"
+                android:textSize="15sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Show Day and Date"
+                android:layout_marginBottom="10dp"
+                />
+        </RelativeLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_below="@+id/l1"
+            android:layout_width="match_parent"
+            android:id="@+id/nestedscrollview"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="EXPLORE CASES"
+                    android:textSize="14sp"
+                    android:textColor="@color/themecolor"
+                    />
+
+                <GridLayout
+                    android:padding="14dp"
+                    android:id="@+id/grid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:listSelector="#00000000"
+                    android:columnCount="2"
+                    android:rowCount="3"
+                    android:alignmentMode="alignMargins">
+                    <com.google.android.material.card.MaterialCardView
+                        app:cardBackgroundColor="@color/white"
+                        android:id="@+id/b"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_columnWeight="1"
+                        android:layout_rowWeight="1"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginBottom="5dp"
+                        android:outlineAmbientShadowColor="#e0e0e0"
+                        android:outlineSpotShadowColor="#e0e0e0"
+                        android:spotShadowAlpha="1"
+                        app:cardElevation="1dp"
+                        app:cardCornerRadius="12dp">
+                        <LinearLayout
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="12dp"
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:textColor="@color/textcolor"
+                                android:fontFamily="@font/quicksand_bold"
+                                android:textAlignment="center"
+                                android:text="Add Case"
+                                android:textSize="17sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <ImageView
+                                android:layout_marginTop="35dp"
+                                android:src="@drawable/ic_newcase"
+                                android:layout_marginBottom="10dp"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp" />
+
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+                    <com.google.android.material.card.MaterialCardView
+                        android:clickable="true"
+                        android:id="@+id/b1"
+                        app:cardBackgroundColor="@color/white"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_columnWeight="1"
+                        android:layout_rowWeight="1"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:outlineAmbientShadowColor="#e0e0e0"
+                        android:outlineSpotShadowColor="#e0e0e0"
+                        android:spotShadowAlpha="1"
+                        app:cardElevation="1dp"
+                        app:cardCornerRadius="12dp">
+                        <LinearLayout
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="12dp"
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:textColor="@color/textcolor"
+                                android:fontFamily="@font/quicksand_bold"
+                                android:textAlignment="center"
+                                android:text="All Cases"
+
+                                android:textSize="17sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:fontFamily="@font/quicksand_regular"
+                                android:textSize="15sp"
+                                android:textColor="@color/textcolor"
+                                android:id="@+id/txt_no_of_allcases"
+                                android:layout_marginTop="5dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0 available"
+                                android:textAlignment="center"/>
+                            <ImageView
+
+                                android:layout_marginTop="10dp"
+                                android:src="@drawable/ic_allcase"
+                                android:layout_marginBottom="10dp"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp" />
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+                    <com.google.android.material.card.MaterialCardView
+                        android:clickable="true"
+                        android:id="@+id/b2"
+                        app:cardBackgroundColor="@color/white"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_columnWeight="1"
+                        android:layout_rowWeight="1"
+
+                        android:layout_marginTop="5dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:outlineAmbientShadowColor="#e0e0e0"
+                        android:outlineSpotShadowColor="#e0e0e0"
+                        android:spotShadowAlpha="1"
+                        app:cardElevation="1dp"
+                        app:cardCornerRadius="12dp">
+                        <LinearLayout
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="12dp"
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:fontFamily="@font/quicksand_bold"
+                                android:textAlignment="center"
+                                android:text="Today Cases"
+                                android:textColor="@color/textcolor"
+                                android:textSize="17sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:textSize="15sp"
+                                android:fontFamily="@font/quicksand_regular"
+                                android:textColor="@color/textcolor"
+                                android:id="@+id/no_of_todaycases"
+                                android:layout_marginTop="5dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0 available"
+                                android:textAlignment="center"/>
+                            <ImageView
+                                android:layout_marginTop="10dp"
+                                android:src="@drawable/ic_todaycase"
+                                android:layout_marginBottom="10dp"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp" />
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/impCasesCard"
+                        app:cardBackgroundColor="@color/white"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_columnWeight="1"
+                        android:layout_rowWeight="1"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:outlineAmbientShadowColor="#e0e0e0"
+                        android:outlineSpotShadowColor="#e0e0e0"
+                        android:spotShadowAlpha="1"
+                        app:cardElevation="1dp"
+                        app:cardCornerRadius="12dp">
+                        <LinearLayout
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="12dp"
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:fontFamily="@font/quicksand_bold"
+                                android:textAlignment="center"
+                                android:text="Important"
+                                android:textColor="@color/textcolor"
+                                android:textSize="17sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:id="@+id/no_of_imp_cases"
+                                android:fontFamily="@font/quicksand_regular"
+                                android:layout_marginTop="5dp"
+                                android:textSize="15sp"
+                                android:textColor="@color/textcolor"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAlignment="center"
+                                android:text="0 available"/>
+
+                            <ImageView
+                                android:layout_marginTop="10dp"
+                                android:src="@drawable/ic_impcases"
+                                android:layout_marginBottom="10dp"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/resolveCasesCard"
+                        app:cardBackgroundColor="@color/white"
+
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_columnWeight="1"
+                        android:layout_rowWeight="1"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:outlineAmbientShadowColor="#e0e0e0"
+                        android:outlineSpotShadowColor="#e0e0e0"
+                        android:spotShadowAlpha="1"
+                        app:cardElevation="1dp"
+                        app:cardCornerRadius="12dp">
+                        <LinearLayout
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="12dp"
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:fontFamily="@font/quicksand_bold"
+                                android:textAlignment="center"
+                                android:text="Resolved"
+                                android:textColor="@color/textcolor"
+                                android:textSize="17sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:id="@+id/txt_no_of_closecases"
+                                android:fontFamily="@font/quicksand_regular"
+                                android:textSize="15sp"
+                                android:textColor="@color/textcolor"
+                                android:layout_marginTop="5dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAlignment="center"
+                                android:text="0 available"/>
+
+                            <ImageView
+                                android:layout_marginTop="10dp"
+                                android:src="@drawable/ic_allcase"
+                                android:layout_marginBottom="10dp"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/openCasesCard"
+                        app:cardBackgroundColor="@color/white"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_columnWeight="1"
+                        android:layout_rowWeight="1"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:outlineAmbientShadowColor="#e0e0e0"
+                        android:outlineSpotShadowColor="#e0e0e0"
+                        android:spotShadowAlpha="1"
+                        app:cardElevation="1dp"
+                        app:cardCornerRadius="12dp">
+                        <LinearLayout
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="12dp"
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:fontFamily="@font/quicksand_bold"
+                                android:textAlignment="center"
+                                android:text="Open Cases"
+                                android:textColor="@color/textcolor"
+                                android:textSize="17sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:id="@+id/no_of_open_cases"
+                                android:fontFamily="@font/quicksand_regular"
+                                android:layout_marginTop="5dp"
+                                android:textSize="15sp"
+                                android:textColor="@color/textcolor"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAlignment="center"
+                                android:text="0 available"/>
+
+                            <ImageView
+                                android:layout_marginTop="10dp"
+                                android:src="@drawable/ic_allcase"
+                                android:layout_marginBottom="10dp"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+
+
+                </GridLayout>
+                <TextView
+                    android:layout_marginStart="30dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/status_overview"
+                    android:textSize="14sp"
+                    android:textColor="@color/themecolor" />
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="30dp"
+                    android:scrollbars="none">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <GridLayout
+                            android:padding="14dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:listSelector="#00000000"
+                            android:columnCount="4"
+                            android:rowCount="1"
+                            android:alignmentMode="alignMargins">
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_columnWeight="1"
+                                android:layout_marginBottom="16dp"
+                                android:layout_rowWeight="1"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginRight="8dp"
+                                android:outlineSpotShadowColor="@color/shadowcolor"
+                                android:outlineAmbientShadowColor="@color/shadowcolor"
+                                app:cardElevation="1dp"
+                                app:cardCornerRadius="12dp">
+                                <LinearLayout
+                                    android:layout_gravity="center_vertical|center_horizontal"
+                                    android:layout_margin="16dp"
+                                    android:orientation="vertical"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+                                    <TextView
+                                        android:id="@+id/addcaseno"
+                                        android:layout_gravity="center_horizontal"
+                                        android:textAlignment="center"
+                                        android:text="0"
+                                        android:textColor="@color/textcolor"
+                                        android:fontFamily="@font/quicksand_bold"
+                                        android:textSize="17sp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content" />
+                                    <TextView
+                                        android:layout_marginTop="5dp"
+                                        android:textSize="15sp"
+                                        android:textColor="@color/textcolor"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textAlignment="center"
+                                        android:text="cases\navailable"/>
+                                </LinearLayout>
+                            </com.google.android.material.card.MaterialCardView>
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="100dp"
+                                android:layout_columnWeight="1"
+                                android:layout_marginBottom="16dp"
+                                android:layout_rowWeight="1"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginRight="8dp"
+                                android:outlineSpotShadowColor="@color/shadowcolor"
+                                android:outlineAmbientShadowColor="@color/shadowcolor"
+                                app:cardElevation="1dp"
+                                app:cardCornerRadius="12dp">
+                                <LinearLayout
+                                    android:layout_gravity="center_vertical|center_horizontal"
+                                    android:layout_margin="16dp"
+                                    android:orientation="vertical"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+                                    <TextView
+                                        android:id="@+id/todaycaseNo"
+                                        android:layout_gravity="center_horizontal"
+                                        android:textAlignment="center"
+                                        android:text="0"
+                                        android:textColor="@color/textcolor"
+                                        android:textSize="17sp"
+                                        android:fontFamily="@font/quicksand_bold"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content" />
+                                    <TextView
+                                        android:textSize="15sp"
+                                        android:textColor="@color/textcolor"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textAlignment="center"
+                                        android:text="scheduled\ntoday"/>
+                                </LinearLayout>
+                            </com.google.android.material.card.MaterialCardView>
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_columnWeight="1"
+                                android:layout_marginBottom="16dp"
+                                android:layout_rowWeight="1"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginRight="8dp"
+                                android:outlineSpotShadowColor="@color/shadowcolor"
+                                android:outlineAmbientShadowColor="@color/shadowcolor"
+                                app:cardElevation="1dp"
+                                app:cardCornerRadius="12dp">
+                                <LinearLayout
+                                    android:layout_gravity="center_vertical|center_horizontal"
+                                    android:layout_margin="16dp"
+                                    android:orientation="vertical"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+                                    <TextView
+                                        android:id="@+id/opencaseNo"
+                                        android:layout_gravity="center_horizontal"
+                                        android:textAlignment="center"
+                                        android:text="0"
+                                        android:textColor="@color/textcolor"
+                                        android:fontFamily="@font/quicksand_bold"
+                                        android:textSize="17sp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content" />
+                                    <TextView
+                                        android:layout_marginTop="5dp"
+
+                                        android:textSize="15sp"
+                                        android:textColor="@color/textcolor"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textAlignment="center"
+                                        android:text="open\n cases"/>
+                                </LinearLayout>
+                            </com.google.android.material.card.MaterialCardView>
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_columnWeight="1"
+                                android:layout_marginBottom="16dp"
+                                android:layout_rowWeight="1"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginRight="8dp"
+                                android:outlineSpotShadowColor="@color/shadowcolor"
+                                android:outlineAmbientShadowColor="@color/shadowcolor"
+                                app:cardElevation="1dp"
+                                app:cardCornerRadius="12dp">
+                                <LinearLayout
+                                    android:layout_gravity="center_vertical|center_horizontal"
+                                    android:layout_margin="16dp"
+                                    android:orientation="vertical"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+                                    <TextView
+                                        android:id="@+id/closedcasesno"
+                                        android:layout_gravity="center_horizontal"
+                                        android:textAlignment="center"
+                                        android:text="0"
+                                        android:textColor="@color/textcolor"
+                                        android:fontFamily="@font/quicksand_bold"
+                                        android:textSize="17sp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content" />
+                                    <TextView
+
+                                        android:textColor="@color/textcolor"
+                                        android:textSize="15sp"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textAlignment="center"
+                                        android:text="closed\ncases"/>
+                                </LinearLayout>
+                            </com.google.android.material.card.MaterialCardView>
+
+                        </GridLayout>
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+
+
+    </RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

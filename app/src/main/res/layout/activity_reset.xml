@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:layout_margin="30dp"
+    tools:context=".Activities.ResetActivity">
+    <TextView
+        android:textColor="@color/themecolor"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Create new password"
+        android:id="@+id/im"/>
+     <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/im"
+        android:text="Your new password must be different from previous used passwords"
+        android:id="@+id/t1"
+        android:textSize="16sp"/>
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_marginTop="20dp"
+        android:id="@+id/e1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:endIconMode="password_toggle"
+        app:boxBackgroundMode="outline"
+        android:hint="Password"
+        android:layout_below="@+id/t1">
+        <com.google.android.material.textfield.TextInputEditText
+            android:inputType="textPassword"
+            android:id="@+id/pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <TextView
+        android:id="@+id/t11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Must be atleast  characters"
+        android:layout_below="@+id/e1"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:boxBackgroundMode="outline"
+        app:endIconMode="password_toggle"
+        android:id="@+id/e2"
+        android:hint="Confirm Password"
+        android:layout_below="@+id/t11">
+        <com.google.android.material.textfield.TextInputEditText
+            android:inputType="textPassword"
+            android:id="@+id/confirm_pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <TextView
+        android:id="@+id/t12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Both passwords must match"
+        android:layout_below="@+id/e2"/>
+    <Button
+        android:id="@+id/btn_reset"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Reset Password"
+        android:layout_below="@+id/t12"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+
+        />
+
+
+
+</RelativeLayout>

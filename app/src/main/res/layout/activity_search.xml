@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.SearchActivity">
+    <RelativeLayout
+        android:id="@+id/r1"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@color/themecolor">
+        <androidx.appcompat.widget.Toolbar
+            app:title="Search Cases"
+            app:titleTextColor="@color/white"
+            android:layout_margin="10dp"
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@drawable/toolbar_background"
+            android:minHeight="?attr/actionBarSize" />
+
+        <androidx.appcompat.widget.SearchView
+            android:backgroundTint="@color/white"
+            android:padding="10dp"
+            android:id="@+id/searchview"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:elevation="2dp"
+            android:background="@drawable/search_bg"
+            android:layout_margin="16dp"
+            android:layout_below="@+id/toolbar"/>
+    </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/r1"
+        android:layout_marginTop="10dp"
+        android:id="@+id/recycler"/>
+
+
+    </RelativeLayout>
